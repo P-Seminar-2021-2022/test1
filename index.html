@@ -1,8 +1,13 @@
 <!DOCTYPE html>
 <html>
-<script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
-<!-- we import arjs version without NFT but with marker + location based support -->
-<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+
+<head>
+    <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
+    <!-- we import arjs version without NFT but with marker + location based support -->
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+    <script src="main.js"></script>
+</head>
+
 
 <body style="margin : 0px; overflow: hidden;">
     <a-scene embedded arjs>
@@ -29,7 +34,8 @@
     </script>
 
     <div class="buttons">
-        <button class="btn">up1</button>
+        <button class="btn" id="movY1">movY1</button>
+        <button class="btn" id="rotY45">rotY45</button>
     </div>
 
 
@@ -42,8 +48,10 @@
         
         .buttons {
             position: absolute;
-            top: 0;
-            left: 0;
+            top: 50px;
+            left: 50px;
+            display: flex;
+            flex-direction: column;
         }
         
         .btn {
@@ -52,6 +60,9 @@
             width: 100px;
             height: 40px;
             border-radius: 1000px;
+            color: white;
+            border: none;
+            margin-bottom: 20px;
         }
     </style>
 </body>
