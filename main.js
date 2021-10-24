@@ -18,4 +18,7 @@ window.onload = function() {
         console.log(p.rotation.y);
         p.rotation.y = (parseInt(p.rotation.y) + 45) % 360;
     })
+
+    var p = document.querySelector('.box').object3D;
+    console.log(p);
 };
