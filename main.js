@@ -6,7 +6,7 @@ window.onload = function() {
 
     document.getElementById('rotY45').addEventListener("click", function() {
         var p = document.querySelector('.box').object3D;
-        console.log(p);
-        p.rotation.y += "45";
+        console.log(p.rotation.y);
+        p.rotation.y = (parseInt(p.rotation.y) + 45) % 360;
     })
 };
