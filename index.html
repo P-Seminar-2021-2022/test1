@@ -15,5 +15,19 @@
         </a-marker>
         <a-entity camera></a-entity>
         </a-scene>
+        
+         var marker = document.querySelector('a-marker');
+        console.log(marker);
+         marker.addEventListener("markerFound", (e)=>{
+         alert("#1");
+         var p = document.querySelector('.box').object3D;
+         p.visible = "true";
+    });
+    marker.addEventListener("markerLost", (e)=>{
+         alert("#1")
+         var p = document.querySelector('.box').object3D;
+         p.visible = "false";
+    });
+  </script>
     </body>
 </html>
