@@ -10,28 +10,22 @@
 
 
 <body style="margin : 0px; overflow: hidden;">
+
+
     <a-scene embedded arjs vr-mode-ui="enabled: false">
+        <a-assets>
+            <video id="vid" src="asset.mp4" preload="auto" response-type="arraybuffer" loop crossorigin webkit-playsinline autoplay muted playsinline></video>
+        </a-assets>
         <a-marker type='pattern' url='pattern.patt'>
 
             <a-box class="box" position='0 0.5 0' material='opacity: 0.9; color: #dbdbdb;'></a-box>
+
+            <a-video src="#vid" scale="1 1 1" position="0 0.1 0" rotation="-90 0 0" gesture-handler></a-video>
+
         </a-marker>
         <a-entity camera></a-entity>
     </a-scene>
 
-    <script>
-        var marker = document.querySelector('a-marker');
-        console.log(marker);
-        marker.addEventListener("markerFound", (e) => {
-
-            var p = document.querySelector('.box').object3D;
-            p.visible = "true";
-        });
-        marker.addEventListener("markerLost", (e) => {
-            a
-            var p = document.querySelector('.box').object3D;
-            p.visible = "false";
-        });
-    </script>
 
     <div class="buttons">
         <button class="btn" id="reset">reset</button>

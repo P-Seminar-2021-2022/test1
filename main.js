@@ -22,3 +22,34 @@ window.onload = function() {
     var p = document.querySelector('.box').object3D;
     console.log(p);
 };
+
+var marker = document.querySelector('a-marker');
+console.log(marker);
+marker.addEventListener("markerFound", (e) => {
+
+    var p = document.querySelector('.box').object3D;
+    p.visible = "true";
+});
+marker.addEventListener("markerLost", (e) => {
+    a
+    var p = document.querySelector('.box').object3D;
+    p.visible = "false";
+});
+
+
+AFRAME.registerComponent('videohandler', {
+    init: function() {
+        var marker = this.el;
+        this.vid = document.querySelector("#vid");
+
+        marker.addEventListener('markerFound', function() {
+            this.toggle = true;
+            this.vid.play();
+        }.bind(this));
+
+        marker.addEventListener('markerLost', function() {
+            this.toggle = false;
+            this.vid.pause();
+        }.bind(this));
+    },
+});
