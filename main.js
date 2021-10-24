@@ -2,8 +2,8 @@ window.onload = function() {
 
     document.getElementById('reset').addEventListener("click", function() {
         var p = document.querySelector('.box').object3D;
-        p.position.y = "0.5";
-        p.rotation.y = "0";
+        p.position.y = 0.5;
+        p.rotation.y = 0;
         console.log(p.position.y);
     })
 
