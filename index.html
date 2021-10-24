@@ -1,34 +1,59 @@
 <!DOCTYPE html>
 <html>
-    <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
-    <!-- we import arjs version without NFT but with marker + location based support -->
-    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
-    <body style="margin : 0px; overflow: hidden;">
-        <a-scene embedded arjs>
+<script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
+<!-- we import arjs version without NFT but with marker + location based support -->
+<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+
+<body style="margin : 0px; overflow: hidden;">
+    <a-scene embedded arjs>
         <a-marker preset="hiro">
             <!-- we use cors proxy to avoid cross-origin problems ATTENTION! you need to set up your server -->
-            <a-box 
-           class="box"
-           position='0 0.5 0' 
-           material='opacity: 0.9; color: #dbdbdb;'
-           ></a-box>
+            <a-box class="box" position='0 0.5 0' material='opacity: 0.9; color: #dbdbdb;'></a-box>
         </a-marker>
         <a-entity camera></a-entity>
-        </a-scene>
-        
-        <script>
-         var marker = document.querySelector('a-marker');
+    </a-scene>
+
+    <script>
+        var marker = document.querySelector('a-marker');
         console.log(marker);
-         marker.addEventListener("markerFound", (e)=>{
-         
-         var p = document.querySelector('.box').object3D;
-         p.visible = "true";
-    });
-    marker.addEventListener("markerLost", (e)=>{
-         a
-         var p = document.querySelector('.box').object3D;
-         p.visible = "false";
-    });
-  </script>
-    </body>
+        marker.addEventListener("markerFound", (e) => {
+
+            var p = document.querySelector('.box').object3D;
+            p.visible = "true";
+        });
+        marker.addEventListener("markerLost", (e) => {
+            a
+            var p = document.querySelector('.box').object3D;
+            p.visible = "false";
+        });
+    </script>
+
+    <div class="buttons">
+        <button class="btn">up1</button>
+    </div>
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        .buttons {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        
+        .btn {
+            position: relative;
+            background-color: black;
+            width: 100px;
+            height: 40px;
+            border-radius: 1000px;
+        }
+    </style>
+</body>
+
 </html>
