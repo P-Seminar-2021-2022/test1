@@ -66,11 +66,7 @@ AFRAME.registerComponent('artoolkit', {
 
         var video = document.getElementsByClassName('video');
         video[0].addEventListener('click', function() {
-            if (video.paused == true) {
-                video.play();
-            } else {
-                video.pause();
-            }
+            alert('click')
         }, false);
     }
 });
