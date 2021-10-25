@@ -13,13 +13,13 @@
 <body style="margin : 0px; overflow: hidden;">
 
 
-    <a-scene embedded arjs='debugUIEnabled: false;' vr-mode-ui="enabled: false" cursor='rayOrigin: mouse'>
+    <a-scene embedded cursor='rayOrigin: mouse'>
         <a-assets>
             <video id="vid" src="asset.mp4" preload="auto" response-type="arraybuffer" loop crossorigin webkit-playsinline autoplay muted playsinline></video>
             <a-asset-item id="asset1" src="test2.gltf"></a-asset-item>
         </a-assets>
         <!-- <a-marker type='pattern' url='pattern.patt'> -->
-        <a-marker type='pattern' url='pattern.patt' emitevents="true" cursor="fuse: false; rayOrigin: mouse" raycaster='near: 0; far: 50000' arjs='sourceType: webcam; debugUIEnabled: false;' renderer='antialias: true; alpha: true'>
+        <a-marker type='pattern' url='pattern.patt' emitevents="true" cursor="fuse: false; rayOrigin: mouse" raycaster='near: 0; far: 50000' arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false;' renderer='antialias: true; alpha: true'>
 
             <a-box class="box" position='0 0.5 0' material='opacity: 0.9; color: #dbdbdb;'></a-box>
 
