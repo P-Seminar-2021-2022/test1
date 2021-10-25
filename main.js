@@ -74,7 +74,7 @@ AFRAME.registerComponent('artoolkit', {
 
 AFRAME.registerComponent('clicker', {
     init: function() {
-        this.el.addEventListener('click', e => {
+        this.el.addEventListener('onMouseEnter', e => {
             alert('Box clicked!');
         });
     }
