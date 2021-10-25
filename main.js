@@ -19,7 +19,7 @@ window.onload = function() {
         p.rotation.y = (parseInt(p.rotation.y) + 45) % 360;
     })
 
-    var p = document.querySelector('a-entity').object3D;
+    var p = document.querySelector('.model').object3D;
     console.log(p);
 };
 
