@@ -64,8 +64,9 @@ AFRAME.registerComponent('artoolkit', {
     init: function() {
         var sceneEl = document.querySelector('a-scene').querySelector('a-assets');
 
-        var video = document.getElementsByClassName('video');
-        video[0].addEventListener('click', function() {
+        var video = document.querySelector('.video');
+        console.log(video);
+        video.addEventListener('click', function() {
             alert('click')
         }, false);
     }
