@@ -1,3 +1,4 @@
+//buttons
 window.onload = function() {
 
     document.getElementById('reset').addEventListener("click", function() {
@@ -25,10 +26,9 @@ window.onload = function() {
         console.log(p);
     })
 
-    var p = document.querySelector('.model').object3D;
-    console.log(p);
 };
 
+//hide elements when marker lost, show them when marker found
 var marker = document.querySelector('a-marker');
 console.log(marker);
 marker.addEventListener("markerFound", (e) => {
@@ -42,7 +42,7 @@ marker.addEventListener("markerLost", (e) => {
     p.visible = "false";
 });
 
-
+//toggle video when marker lost/found
 AFRAME.registerComponent('videohandler', {
     init: function() {
         var marker = this.el;
