@@ -17,12 +17,15 @@
         <a-assets>
             <video id="vid" src="asset.mp4" preload="auto" response-type="arraybuffer" loop crossorigin webkit-playsinline autoplay muted playsinline></video>
             <a-asset-item id="asset1" src="test2.gltf"></a-asset-item>
+            <a-asset-item id="animated-asset" src="https://raw.githubusercontent.com/nicolocarpignoli/nicolocarpignoli.github.io/master/ar-click-events/models/CesiumMan.gltf">
+            </a-asset-item>
         </a-assets>
         <a-marker type='pattern' url='pattern.patt' emitevents="true" cursor="fuse: false; rayOrigin: mouse" raycaster='near: 0; far: 50000' arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false;' renderer='antialias: true; alpha: true'>>
 
             <a-box class="box" position='0 0.5 0' material='opacity: 0.9; color: #dbdbdb;'></a-box>
 
-            <a-video src="#vid" scale="1 1 1" position="0 0 1" rotation="-90 0 0" gesture-handler class="video" clicker></a-video>
+            <a-video src="#vid" scale="1 1 1" position="0 0 1" rotation="-90 0 0" gesture-handler class="video" clicker>
+            </a-video>
 
             <a-entity class="model" gltf-model="#asset1" scale="1 1 1" position="-1 0 0"></a-entity>
 
