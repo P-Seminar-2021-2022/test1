@@ -1,4 +1,4 @@
-# AR Test #1
+# AR Test
 
 # Demo
 https://www.youtube.com/watch?v=IK5TcKyOa5Y
