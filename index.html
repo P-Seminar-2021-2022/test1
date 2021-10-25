@@ -5,7 +5,7 @@
     <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
     <!-- we import arjs version without NFT but with marker + location based support -->
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
-    <script src="https://rawgit.com/nicolocarpignoli/nicolocarpignoli.github.io/master/ar-click-events/events.js"></script>
+    <script src="https://rawgit.com/nicolocarpignoli/nicolocarpignoli.github.io/master/ar-click-events/events.js" defer></script>
     <script src="main.js" defer></script>
 </head>
 
@@ -19,7 +19,7 @@
             <a-asset-item id="asset1" src="test2.gltf"></a-asset-item>
             <a-asset-item id="animated-asset" src="https://raw.githubusercontent.com/nicolocarpignoli/nicolocarpignoli.github.io/master/ar-click-events/models/CesiumMan.gltf"></a-asset-item>
         </a-assets>
-        <a-marker type='pattern' url='pattern.patt' markerhandler emitevents="true" cursor="rayOrigin: mouse" id="animated-marker">
+        <a-marker type='pattern' url='pattern.patt' emitevents="true" cursor="fuse: false; rayOrigin: mouse">
 
             <a-box class="box" position='0 0.5 0' material='opacity: 0.9; color: #dbdbdb;'></a-box>
 
@@ -34,7 +34,7 @@
 
 
             </a-entity>
-            <a-entity href="mailto:nico@sayhello.ch" target="_blank" obj-model="obj: url(test3.obj);" material="color: #14b3b6" scale="2 2 2 " position="1 1 1 " rotation="90 0 0"></a-entity>
+            <a-entity href="https://Luttkus.net" target="_blank" obj-model="obj: url(test3.obj);" material="color: #14b3b6" scale="2 2 2 " position="1 1 1 " rotation="90 0 0"></a-entity>
 
 
 
