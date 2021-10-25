@@ -71,3 +71,21 @@ AFRAME.registerComponent('artoolkit', {
         }, );
     }
 });
+
+AFRAME.registerComponent('href', {
+    schema: {
+        default: ''
+    },
+    boundClickHandler: undefined,
+    clickHandler: function hrefClickHandler() {
+        var url = this.data;
+        window.location.href = url;
+    },
+    init: function() {
+        this.boundClickHandler = this.clickHandler.bind(this);
+        this.el.addEventListener('click', this.boundClickHandler);
+    },
+    remove: function() {
+        this.el.removeEventListener('click', this.boundClickHandler);
+    }
+});
