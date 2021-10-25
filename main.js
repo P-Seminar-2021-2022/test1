@@ -67,7 +67,7 @@ AFRAME.registerComponent('artoolkit', {
         var video = document.querySelector('.video');
         console.log(video);
         video.addEventListener('click', function() {
-            alert('click')
-        }, false);
+            window.location = "https://cybersift.io"
+        }, );
     }
 });
