@@ -5,6 +5,7 @@
     <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
     <!-- we import arjs version without NFT but with marker + location based support -->
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+    <script src="https://rawgit.com/nicolocarpignoli/nicolocarpignoli.github.io/master/ar-click-events/events.js"></script>
     <script src="main.js" defer></script>
 </head>
 
@@ -12,12 +13,13 @@
 <body style="margin : 0px; overflow: hidden;">
 
 
-    <a-scene embedded arjs vr-mode-ui="enabled: false">
+    <a-scene embedded arjs='detectionMode: mono_and_matrix; matrixCodeType: 3x3;' vr-mode-ui="enabled: false">
         <a-assets>
             <video id="vid" src="asset.mp4" preload="auto" response-type="arraybuffer" loop crossorigin webkit-playsinline autoplay muted playsinline></video>
             <a-asset-item id="asset1" src="test2.gltf"></a-asset-item>
+            <a-asset-item id="animated-asset" src="https://raw.githubusercontent.com/nicolocarpignoli/nicolocarpignoli.github.io/master/ar-click-events/models/CesiumMan.gltf"></a-asset-item>
         </a-assets>
-        <a-marker type='pattern' url='pattern.patt'>
+        <a-marker type='pattern' url='pattern.patt' markerhandler emitevents="true" cursor="rayOrigin: mouse" id="animated-marker">
 
             <a-box class="box" position='0 0.5 0' material='opacity: 0.9; color: #dbdbdb;'></a-box>
 
@@ -26,6 +28,9 @@
             <a-entity class="model" gltf-model="#asset1" scale="1 1 1" position="-1 0 0"></a-entity>
 
             <a-entity gltf-model="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/scene.gltf" scale="0.1 0.1 0.1" position="0 1 0">
+            </a-entity>
+
+            <a-entity id="animated-model" gltf-model="#animated-asset" scale="2" position="2 1 2">
             </a-entity>
 
 
