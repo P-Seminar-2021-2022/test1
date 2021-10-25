@@ -67,7 +67,7 @@ AFRAME.registerComponent('artoolkit', {
         var video = document.querySelector('.video');
         console.log(video);
         video.addEventListener('click', function() {
-            // window.location = "https://luttkus.net"
+            window.location = "https://luttkus.net"
         }, );
     }
 });
