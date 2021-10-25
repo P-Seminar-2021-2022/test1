@@ -21,7 +21,7 @@ window.onload = function() {
 
     document.getElementById('movX1').addEventListener("click", function() {
         var p = document.querySelector('.model').object3D;
-        p.position.y = parseInt(p.position.y) + 1;
+        p.position.x = parseInt(p.position.x) + 1;
         console.log(p);
     })
 
