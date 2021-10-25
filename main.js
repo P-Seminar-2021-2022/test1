@@ -59,3 +59,18 @@ AFRAME.registerComponent('videohandler', {
         }.bind(this));
     },
 });
+
+AFRAME.registerComponent('artoolkit', {
+    init: function() {
+        var sceneEl = document.querySelector('a-scene').querySelector('a-assets');
+
+        var video = document.getElementsByClassName('video');
+        video[0].addEventListener('click', function() {
+            if (video.paused == true) {
+                video.play();
+            } else {
+                video.pause();
+            }
+        }, false);
+    }
+});
