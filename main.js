@@ -19,6 +19,12 @@ window.onload = function() {
         p.rotation.y = (parseInt(p.rotation.y) + 45) % 360;
     })
 
+    document.getElementById('movX1').addEventListener("click", function() {
+        var p = document.querySelector('.model').object3D;
+        p.position.y = parseInt(p.position.y) + 1;
+        console.log(p);
+    })
+
     var p = document.querySelector('.model').object3D;
     console.log(p);
 };
